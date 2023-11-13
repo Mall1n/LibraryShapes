@@ -6,11 +6,11 @@ namespace MyLib
     interface IShape
     {
         string Name { get; }
-        float Area { get; }
-        float Radius_Big { get; }
+        float Area { get; } // Площадь
+        float Radius_Big { get; } // Радиус описанной окружности 
 
-        float GetRadiusFromArea();
-        float GetAreaFromRadius();
+        float GetRadiusFromArea(); // Вычислить радиус по площади круга
+        float GetAreaFromRadius(); // Вычислить площадь по радиусу круга
     }
 
 
@@ -20,8 +20,6 @@ namespace MyLib
 
         private float radius_Big;
         public virtual float Radius_Big { get { return radius_Big; } private protected set { radius_Big = value; area = GetAreaFromRadius(); } }
-
-
 
         private float area;
         public float Area { get { return area; } private protected set { area = value; radius_Big = GetRadiusFromArea(); } }
@@ -42,10 +40,9 @@ namespace MyLib
         public Shape(string Name, float radius) : this(Name) { Radius_Big = radius; Area = GetAreaFromRadius(); }
 
 
-        public virtual float GetRadiusFromArea() => (float)(Math.Sqrt(Area / Math.PI));
+        public virtual float GetRadiusFromArea() => (float)(Math.Sqrt(Area / Math.PI)); // Вычислить радиус по площади круга
 
-        public virtual float GetAreaFromRadius() => (float)(Math.PI * Math.Pow(Radius_Big, 2));
-
+        public virtual float GetAreaFromRadius() => (float)(Math.PI * Math.Pow(Radius_Big, 2)); // Вычислить площадь по радиусу круга
 
         public override string ToString() => $"Радиус = {Radius_Big}\nПлощадь = {Area}\nName = {Name}\n";
     }
@@ -61,9 +58,9 @@ namespace MyLib
         //public override float GetAreaFromRadius() => (float)(Math.PI * Math.Pow(Radius_Big, 2));
 
         //public override float GetRadiusFromArea() => (float)(Math.Sqrt(Area / Math.PI));
-        public static float GetRadius(float area) => (float)(Math.Sqrt(area / Math.PI));
+        public static float GetRadius(float area) => (float)(Math.Sqrt(area / Math.PI)); // Вычислить радиус по площади круга
 
-        public static float GetArea(float radius) => (float)(Math.PI * Math.Pow(radius, 2));
+        public static float GetArea(float radius) => (float)(Math.PI * Math.Pow(radius, 2)); // Вычислить площадь по радиусу круга
 
         public override string ToString() => $"---(ОКРУЖНОСТЬ)---\nРадиус = {Radius_Big}\nПлощадь = {Area}\nName = {Name}";
 
@@ -80,13 +77,15 @@ namespace MyLib
 
         private float triangle_p; // Полупериметр треугольника
         public float _triangle_p { get { return triangle_p; } private set { triangle_p = value; TriangleP = triangle_p * 2; } }
-        private float TriangleArea;
+
+        private float TriangleArea; // Площадь треугольника
         public float triangleArea { get { return TriangleArea; } private set { TriangleArea = value; } }
-        private float radius_Small;
+
+        private float radius_Small; // Радиус вписанной окружности
         public float Radius_Small { get { return radius_Small; } private protected set { radius_Small = value; } }
 
-        public bool triangleExists { get; private set; }
-        public bool rightAngle { get; private set; }
+        public bool triangleExists { get; private set; } // Существует ли треугольник
+        public bool rightAngle { get; private set; } // Прямоугольный ли треугольник
 
         public Triangle() { }
 
@@ -114,7 +113,7 @@ namespace MyLib
             if (triangleExists) CalculateTriangle();
         }
 
-        private void CalculateTriangle()
+        private void CalculateTriangle() // Вычислить все параметры треугольника
         {
             _TriangleP = FindTriangleP();
             triangleArea = FirnTriangleArea();
@@ -124,14 +123,14 @@ namespace MyLib
         }
 
 
-        private bool TriangleExists()
+        private bool TriangleExists() // Проверка на существования треугольника
         {
             if (lenght_a + lenght_b > lenght_c && lenght_a + lenght_c > lenght_b && lenght_b + lenght_c > lenght_a) 
                 return true;
             else return false;
         }
 
-        private bool RightAngle()
+        private bool RightAngle() // Проверка на прямоугольный треугольник
         {
             float biggest = lenght_a;
             if (biggest < lenght_b) biggest = lenght_b;

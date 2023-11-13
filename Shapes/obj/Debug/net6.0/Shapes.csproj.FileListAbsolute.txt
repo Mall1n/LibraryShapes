@@ -20,3 +20,14 @@ D:\VSC\Test\Shapes\obj\Debug\net6.0\Shapes.dll
 D:\VSC\Test\Shapes\obj\Debug\net6.0\refint\Shapes.dll
 D:\VSC\Test\Shapes\obj\Debug\net6.0\Shapes.pdb
 D:\VSC\Test\Shapes\obj\Debug\net6.0\ref\Shapes.dll
+D:\VSC\LibraryShapes\Shapes\bin\Debug\net6.0\Shapes.deps.json
+D:\VSC\LibraryShapes\Shapes\bin\Debug\net6.0\Shapes.dll
+D:\VSC\LibraryShapes\Shapes\bin\Debug\net6.0\Shapes.pdb
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.GeneratedMSBuildEditorConfig.editorconfig
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.AssemblyInfoInputs.cache
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.AssemblyInfo.cs
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.csproj.CoreCompileInputs.cache
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.dll
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\refint\Shapes.dll
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\Shapes.pdb
+D:\VSC\LibraryShapes\Shapes\obj\Debug\net6.0\ref\Shapes.dll
