@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Console/1.0.0": {
+        "dependencies": {
+          "Shapes": "1.0.0"
+        },
+        "runtime": {
+          "Console.dll": {}
+        }
+      },
+      "Shapes/1.0.0": {
+        "runtime": {
+          "Shapes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Shapes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
